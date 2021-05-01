@@ -11,10 +11,12 @@ for player in roster_list:
 # Uppercase all player names using a comprehension
 roster_list_proper = [x.title() for x in roster_list]
 
-# Split first name from last name using a comprehension (this won't work for Robbie Ray because Ray is the [3] index in the string 'Robbie "Pants" Ray'
+# Split first name from last name using a comprehension (this won't work for
+# Robbie Ray because Ray is the [3] index in the string 'Robbie "Pants" Ray'
 roster_last_names = [full_name.split(' ')[1] for full_name in roster_list]
 
-# Filter a comprehension to include only certain items from the list. For example, here we will query only last names that start with 'b'
+# Filter a comprehension to include only certain items from the list.
+# For example, here we will query only last names that start with 'b'
 roster_b_only = [x.title() for x in roster_list if x.startswith('b')]
 
 # Define a dict, 'roster_dict' to include some players and their positions. Note that dicts are also iterable.
@@ -51,9 +53,3 @@ salary_m_per_upper_player = {
 }
 
 sum([salary for _, salary in salary_per_player.items()])
-
-
-
-
-
-
